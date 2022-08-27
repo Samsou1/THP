@@ -1,0 +1,20 @@
+<div class="container text-center">
+  <h1 class="mb-3">Gossips</h1>
+  <div class="row row-cols-1 row-cols-md-3 text-center">
+    <% @gossips.each_with_index do |gossip| %>
+      <div class="col">
+        <%# <div class="col col-sm-12 d-flex"> %>
+          <div class="col card mb-4 rounded-3 shadow-sm">
+            <div class="card-header">
+              <a class="index" href="/gossips/<%=gossip.id %>">Gossip n° <%= gossip.id %></a>
+            </div>
+            <div class= "card-body">
+              <span class="card-tile ">Author:      </span><%= gossip.user.first_name %><br>
+              <span class="font-bold">Title:      </span><%= gossip.title %>
+            </div>
+          </div>
+        <%# </div> %>
+      </div>
+    <% end %>
+  </div>
+</div>

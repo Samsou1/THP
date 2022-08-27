@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="col">
+    <div class="bs-component">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title text-muted"><%= @event.title %></h5>
+          <h6 class="card-subtitle text-muted"><%= @event.admin.first_name %></h6>
+        </div>
+        <%if @event.event_picture.attached?%>
+          <%= image_tag @event.event_picture, alt: 'event_picture' %>
+        <%else%>
+          <img src="https://source.unsplash.com/1000x500/?" class="card-img-top" alt="Picture">
+        <%end%>
+        <div class="card-body">
+          <p class="card-text text-muted"><%= @event.description %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Place: <%= @event.location %></li>
+          <li class="list-group-item">Price: <%= @event.price %></li>
+          <li class="list-group-item">Attendees: <%= @count %></li>
+          <li class="list-group-item">Contact: <%= @event.admin.email %></li>
+        </ul>
+        <div class="card-footer text-muted"><%= @event.start_date.strftime("#{@event.start_date.day.ordinalize} %B %Y") %>
+        </div>
+        <div class="container d-flex justify-content-around">
+          <% if @attendance_possible %>
+          <%# <div><%= link_to "Attend this event", new_event_attendance_path(@event.id), class: "btn btn-primary" %>
+            <div><%= button_to "Book now! (payment)", checkout_index_path, params: {id: @event.id}, remote: true, class: "btn btn-primary" %></div>
+          <% end %>
+          <% if @event.admin.id == current_user.id || current_user.admin == true %>
+            <div><%= link_to "Edit", edit_event_path(@event), class: "btn btn-primary" %></div>
+            <div><%= link_to "Show attendees", event_attendances_path(@event.id), class: "btn btn-primary" %></div>
+            <div><%= link_to "Delete", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

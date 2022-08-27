@@ -1,0 +1,144 @@
+CREATE TABLE IF NOT EXISTS tags (
+  TagId INTEGER PRIMARY KEY AUTOINCREMENT,
+  Title TEXT NOT NULL,
+  Colour TEXT
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  UserId INTEGER PRIMARY KEY AUTOINCREMENT,
+  LastName VARCHAR(10)
+);
+
+CREATE TABLE IF NOT EXISTS articles (
+  ArticleId INTEGER PRIMARY KEY AUTOINCREMENT,
+  Title TEXT,
+  UserId INTEGER,
+  FOREIGN KEY(UserId) REFERENCES users(UserId)
+);
+
+CREATE TABLE IF NOT EXISTS categories (
+  CategoryId INTEGER PRIMARY KEY AUTOINCREMENT,
+  Title TEXT
+);
+
+CREATE TABLE IF NOT EXISTS categories_articles (
+  ArticleId INTEGER,
+  CategoryId INTEGER,
+  FOREIGN KEY(ArticleId) REFERENCES articles(ArticleId),
+  FOREIGN KEY(CategoryId) REFERENCES categories(CategoryId)
+)
+
+************************
+
+1
+courses
+id_course
+title
+description
+
+lessons
+id_lesson
+title
+body
+id_course FOREIGN KEY
+
+2
+pins
+id_pin
+url
+
+users
+id_user
+name
+
+pins_comments
+id_pins_comments
+comment
+id_user FOREIGN KEY
+id_pin FOREIGN KEY
+
+3
+users
+id_user
+name
+
+pins
+id_pin
+url
+
+comments_of_pins
+id_comments_of_pins
+comment
+id_user FOREIGN KEY
+id_pin FOREIGN KEY
+
+comments_of_comments
+id_comments_of_comments
+comment
+id_comments_of_pins FOREIGN KEY
+
+4
+users
+id_user
+name
+id_course FOREIGN KEY
+
+courses
+id_course
+name
+
+************************
+
+SELECT * FROM albums;
+
+SELECT * FROM albums WHERE Title LIKE '%Great%';
+
+SELECT COUNT(*) FROM albums;
+
+DELETE FROM albums WHERE Title LIKE '%music%';
+
+SELECT * FROM albums
+JOIN artists ON artists.ArtistId = albums.AlbumId
+WHERE artists.Name = 'AC/DC';
+
+SELECT * FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+JOIN artists ON artists.ArtistId = albums.ArtistId
+WHERE artists.Name = 'AC/DC';
+
+SELECT * FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+WHERE albums.Title = "Let There Be Rock";
+
+SELECT SUM(UnitPrice), SUM(Milliseconds/1000) FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+WHERE albums.Title = "Let There Be Rock";
+
+SELECT SUM(UnitPrice) FROM tracks
+JOIN albums ON albums.AlbumId = tracks.AlbumId
+JOIN artists ON artists.ArtistId = albums.ArtistId
+WHERE artists.Name = "Deep Purple";
+
+
+#How to add a new Artist
+INSERT INTO artists (Name) VALUES ('Linkin Park');
+
+#How to add an album 
+###If we know what the ArtistId is :
+SELECT DISTINCT ArtistId FROM artists WHERE Name = 'Linkin Park'; ==> 276
+INSERT INTO albums (Title, ArtistId) VALUES ('Meteora', 276)
+###If we dont know what the ArtistId is :
+INSERT INTO albums (Title,ArtistId)
+SELECT 'Meteora', ArtistId FROM artists
+WHERE Name = 'Linkin Park';
+
+#How to add a track
+###If we know what the AlbumId is :
+SELECT DISTINCT AlbumId FROM albums WHERE ArtistId = 276; ==> 348
+INSERT INTO tracks (Name, AlbumId, MediaTypeId, Milliseconds, UnitPrice) VALUES ('Papercut', 348, 1, 184000, 0.99),('In the End', 348, 1, 216000, 0.99),('Crawling', 348, 1, 208000, 0.99);
+###If we don t know what the AlbumId is :
+INSERT INTO tracks (Name, AlbumId, MediaTypeId, Milliseconds, UnitPrice)
+SELECT 'Somewhere I belong', AlbumId, 1, 213000, 0.99 FROM albums
+WHERE Title = 'Meteora';
+
+************************

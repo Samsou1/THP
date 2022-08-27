@@ -1,0 +1,13 @@
+for (const node of document.body.querySelectorAll("*")){
+  if (node.innerText.startsWith("<%= @task.title%>")){
+    if (node.tagName === "LI"){
+      node.hidden = true;
+      break;
+    } else if (node.children[0].children[0].tagName === "LI"){
+      node.children[0].children[0].hidden = true;
+      break;
+    } else {
+      break;
+    }
+  }
+}

@@ -1,0 +1,2 @@
+
+document.querySelectorAll(".col-6")[1].insertAdjacentHTML("afterbegin", "<%= j render 'email', email: @email %>");

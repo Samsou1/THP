@@ -1,0 +1,40 @@
+<div class="container text-center">
+  <h3>You're new to this gossip world? You're at the right place.</h3>
+  <br>
+  <%= form_with url: user_index_path, local: true do |form| %>
+    <p>First name</p>
+    <%= form.text_field :first_name %>
+    <br>
+    <p>Last name</p>
+    <%= form.text_field :last_name %>
+    <br>
+    <p>City</p>
+    <%= form.text_field :city %>
+    <br>
+    <p>Email</p>
+    <%= form.text_field :email %>
+    <br>
+    <br>
+    <p>Password</p>
+    <%= form.password_field :password %>
+    <br>
+    <p>Repeat password</p>
+    <%= form.password_field :password_confirmation %>
+    <br>
+    <%= form.submit "Publish" %>
+  <% end %>
+  <br>
+  <br>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p>We were not able to create this new user for the following reason(s):</p>
+      <ul style="list-style-type:none">
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <br>
+    <p>Please try again</p>
+  <% end %>
+</div>

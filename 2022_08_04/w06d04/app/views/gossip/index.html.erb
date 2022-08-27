@@ -1,0 +1,48 @@
+<div class="container text-center">
+  <h1 class="mb-3">Gossips</h1>
+  <div>Do you want to create a new gossip?</div>
+  <div><%= link_to "Click here", new_gossip_path %></div>
+  <br>
+  <br>
+  <div class="row row-cols-1 row-cols-md-3 text-center">
+    <% @gossips.each_with_index do |gossip| %>
+      <div class="col">
+        <div class="col card mb-4 rounded-3 shadow-sm">
+          <div class="card-header">
+            <a class="index" href="/gossip/<%=gossip.id %>">Gossip n° <%= gossip.id %></a>
+          </div>
+          <div class= "card-body">
+            <span class="card-tile text-secondary ">Author:      </span>
+            <br>
+            <%= gossip.user.first_name %>
+            <br>
+            <span class="font-bold text-secondary">Title:      </span>
+            <br>
+            <%= gossip.title %>
+            <br>
+            <br>
+            <span class="font-bold text-secondary">Comments:      </span>
+            <%= gossip.comments.count %>
+            <br>
+            <span class="font-bold text-secondary">Likes:        </span>
+            <%= @likes.where(gossip_id: gossip.id).count %>
+            <% if logged_in?  %>
+              <% if @likes.where(gossip_id: gossip&.id, user_id: current_user&.id).count == 1 %>
+                <%= form_with url: like_path(:id), method: :delete, local: true do |form|%>
+                  <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i> </button>
+                  <%= hidden_field :gossip_id, gossip.id%>
+                <% end %>
+              <% end %>
+              <% if @likes.where(gossip_id: gossip&.id, user_id: current_user&.id).count == 0 %>
+                <%= form_with url: like_index_path, local: true do |form|%>
+                  <button class="btn btn-block btn-secondary"><i class="fa fa-thumbs-up"></i> </button>
+                  <%= hidden_field :gossip_id, gossip.id%>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

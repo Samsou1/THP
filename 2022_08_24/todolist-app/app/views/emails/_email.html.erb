@@ -1,0 +1,12 @@
+<h2 class="text-center">Email you picked</h2> 
+        <br>
+<h3><%= @email.object  %></h3>
+<p><%= @email.body  %> </p> 
+<div class="d-flex justify-content-around">
+  <%= form_tag(email_path(id:@email.id), method: "delete", class: "form", id: "email-delete-form", remote: true)  do %>
+      <button class="btn-primary "> Delete </button>
+  <%end%>
+  <%= form_tag(email_path(id:@email.id), method: "patch", class: "form", id: "email-read-form", remote: true)  do %>
+    <button class="btn-primary "> Mark as unread </button>
+  <%end%>
+</div>

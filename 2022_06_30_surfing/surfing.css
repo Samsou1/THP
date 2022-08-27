@@ -1,0 +1,29 @@
+.hero{
+    
+    height: 500px;
+    background-image: url(surf_1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav + header{
+    color: white;
+    padding:0px;
+    margin:0px;
+}
+
+main{
+    color:21252a;
+}
+
+html{
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+
+.main > div{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

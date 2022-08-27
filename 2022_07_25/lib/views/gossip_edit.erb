@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <main>
+      <a href="/"><img src="/img/TMP.png" alt="TMP"></a>
+      <h2>You wanna edit this gossip?</h2>
+      <p>
+        <span>Author:     </span><%= gossip.keys.first %><br/>
+        <span>Content:     </span><%= gossip.values.first %>
+      </p>
+      <p>
+        Here, tell us what you wanna change
+      </p>
+      <form action='/gossips/<%=index%>/edit/' method='POST'>
+        Your name:  <input type='text' name='gossip_author'/><br/>
+        Your gossip: <input type='text' name='gossip_content'/><br/>
+        <input type='submit'/>
+        </main>
+      </body>
+    </html>

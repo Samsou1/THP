@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/reference/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/reference/custom.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <title>User-card</title>
+</head>
+
+<body>
+  <div class="col-8 m-auto">
+    <div class="bs-component">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"><%= #{@user.first_name @user.last_name} %></h5>
+        </div>
+        <img src="https://source.unsplash.com/1000x500?person" alt="placeholder">
+        <div class="card-body">
+          <p class="card-text"><%= @user.description %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">email: <%= @user.email %></li>
+          <li class="list-group-item">member since: <%= @user.created_at %></li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link"></a>
+          <!-- <a href="#" class="card-link">Unregister</a> -->
+        </div>
+        <div class="card-footer text-muted">Last updated
+          <%= user.updated_at.strftime("#{user.updated_at.day.ordinalize} %B %Y") %></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

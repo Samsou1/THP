@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <main>
+      <a href="/"><img src="/img/TMP.png" alt="TMP"></a>
+      <h2>You asked for gossip and you shall receive</h2>
+      <p>
+        <span>Author:     </span><%= gossip.keys.first %><br/>
+        <span>Content:     </span><%= gossip.values.first %>
+      </p>
+      <a href="<%=index%>/edit/">You want to edit this gossip?</a> </br>
+    <h2>Do you want to add a comment?</h2>
+    <form action="/gossips/<%= index %>" method='POST'>
+      Your name:  <input type='text' name='comment_author'/><br/>
+      Your comment: <input type='text' name='comment_content'/><br/>
+      <input type='submit'/>
+    </form>
+    <h2>Comments:</h2>
+    <section>
+      <% comments[index.to_i - 1].each_with_index do |comment, idx| %>
+        <p>
+          <span>Author:     </span><%= comment.keys.first %><br/>
+          <span>Content:     </span><%= comment.values.first %>
+        </p>
+      <% end %>
+    </section>
+  </main>
+</body>
+</html>

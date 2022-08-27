@@ -1,0 +1,40 @@
+<div class="container text-center">
+  <h3>You want to edit this gossip? You're at the right place.</h3>
+  <br>
+  <%= form_with url: gossip_path, method: :patch, local: true do |form| %>
+    <div class="form-group">
+      <label>What title do you want to give your gossip?</label><br><br>
+      <%= form.text_field :gossip_title %>
+    </div>
+    <br>
+    <br>
+    <p>Give us the dirt</p>
+    <%= form.text_area :gossip_content, size: "70x5" %>
+    <br>
+    <%= form.submit "Publish" %>
+  <% end %>
+
+
+
+   <%= form_with url: gossip_path, method: :delete, local: true do |form| %>
+    <br>
+    <%= form.submit "DELETE GOSSIP" %>
+  <% end %>
+
+
+
+  <br>
+  <br>
+  <% if @gossip.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p>We were not able to edit this new gossip for the following reason(s):</p>
+      <ul style="list-style-type:none">
+        <% @gossip.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <br>
+    <p>Please try again</p>
+  <% end %>
+</div>

@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center text-center">
+  <div class="card shadow-sm w-50 text-bg-light" style="width: 18rem;">
+    <img src="https://source.unsplash.com/1000x500/?" class="card-img-top" alt="Picture">
+    <div class="card-body">
+      <h5 class="card-title fw-bold"><%= @event.title%></h5>
+      <h6 class="fw-bold">Number of participants: <%= @count%></h5>
+      <br>
+      <% @attendees.each_with_index do |att,i| %>
+          <p><%= i + 1 %>. <%= User.find(att.user_id).email%></p>
+          <br>
+      <% end %>
+    </div>
+    <%= link_to "Edit this event", edit_event_path(@event.id), class: "btn btn-lg btn-primary" %>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container text-center">
+  <h1 class="mb-3">Users</h1>
+  <div class="row row-cols-1 row-cols-md-3 text-center">
+    <% @users.each_with_index do |user| %>
+      <div class="col">
+        <div class="col card mb-4 rounded-3 shadow-sm">
+          <div class="card-header">
+            <a class="index" href="/user/<%=user.id %>">User ID: <%= user.id %></a>
+          </div>
+          <div class= "card-body">
+            <span class="card-tile ">First name:      </span><%= user.first_name %><br>
+            <span class="font-bold">Last Name:      </span><%= user.last_name %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

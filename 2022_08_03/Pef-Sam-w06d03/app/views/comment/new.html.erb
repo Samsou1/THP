@@ -1,0 +1,24 @@
+<div class="container text-center">
+  <h3>You want to create a new comment? You're at the right place.</h3>
+  <br>
+  <%= form_with url: gossip_comment_index_path, local: true do |form| %>
+    <p>Give us the dirt</p>
+    <%= form.text_area :comment_content, size: "70x5" %>
+    <br>
+    <%= form.submit "Publish" %>
+  <% end %>
+  <br>
+  <br>
+  <% if @comment.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p>We were not able to create this new comment for the following reason(s):</p>
+      <ul style="list-style-type:none">
+        <% @comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <br>
+    <p>Please try again</p>
+  <% end %>
+</div>

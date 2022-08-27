@@ -1,0 +1,14 @@
+<div class="container text-center">
+  <h3>Log in</h3>
+  <br>
+  <%= form_with url: session_index_path, local: true do |form| %>
+    <%#La méthode form_with appelle implicitement la méthode post, local true est nécessaire pour rails 5.2 et 6.0%>
+    <p>Email</p>
+    <%= form.text_field :session_email %>
+    <br>
+    <p>Password</p>
+    <%= form.password_field :session_password %>
+    <br>
+    <%= form.submit "Publish" %>
+  <% end %>
+</div>

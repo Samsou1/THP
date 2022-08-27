@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-center text-center">
+  <div class="card shadow-sm w-50 text-bg-light">
+    <div class="card-header">
+      <div><%= link_to @event.title, event_path(@event.id) %></div>
+    </div>
+    <div class= "card-body">
+      <%= form_with url: event_path(@event.id), method: :patch, local: true do |form| %>
+        <p>Description</p>
+        <%= form.text_area :description, value: @event.description, size: "70x5" %>
+        <br><br>
+        <p>Location</p>
+        <%= form.text_field :location, value: @event.location %>
+        <br><br>
+        <p>Price</p>
+        <%= form.text_field :price, in: 1..1000, value: @event.price %>
+        <br><br>
+        <p>Starting date</p>
+        <%= form.datetime_local_field :start_date, value: @event.start_date %>
+        <br><br>
+        <p>Duration</p>
+        <%= form.number_field :duration, step: 5 ,value: @event.duration %>
+        <br><br>
+        <%= form.submit "Accept" %>
+      <% end %>
+      <br>
+      <%= link_to "Delete this event", event_path(@event.id), method: :delete, class: "btn btn-lg btn-primary"%>
+    </div>
+  </div>
+</div>

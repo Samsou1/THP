@@ -1,0 +1,67 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+}
+
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+}
+
+.banner-content {
+  position: relative;
+  text-align: center;
+}
+
+.spacer-sm {
+  height: 10vh;
+}
+
+.spacer-md {
+  height: 20vh;
+}
+
+.spacer-lg {
+  height: 30vh;
+}

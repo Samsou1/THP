@@ -1,0 +1,45 @@
+<h1 class="text-center mb-4">Welcome to the email part</h1>
+<div class="container d-flex justify-content-center ">
+  <div class="col">
+    <%= form_tag(emails_path, method: "create", class: "form justify-content-center", id: "email-create-form", remote: true)  do %>
+      <button class="btn-primary "> Create email </button>
+    <%end%>
+    <div class ="row">
+      <div class = "col-6 border border-primary">
+        <h2 class="text-center">List of your emails</h2>
+        <br>
+        <ul>
+          <% @emails.each_with_index do  |email, index|%>
+          <% if email.read == true%>
+            <li id = "<%= email.id%>"> 
+            <%= form_tag(email_path(id:email.id), method: "show", class: "form", id: "show-form", remote: true)  do %>
+              <%= link_to email.object, email_path(id:email.id), remote: true %>
+            <%end%>
+            <br>
+            </li>
+          <% else %>
+            <li id = "<%= email.id%>"> <strong>
+            <%= form_tag(email_path(id:email.id), method: "show", class: "form", id: "show-form", remote: true)  do %>
+              <%= link_to email.object, email_path(id:email.id), remote: true %>
+            <%end%>
+            </strong>
+            <br>
+            </li>
+          <% end%>
+            
+          <% end %>
+        </ul>
+      </div>
+      <div class = "col-6 border border-primary">
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+selector = document.querySelectorAll(".row > .col-6 > ul > li");
+selector.forEach((li) => {
+  li.addEventListener("click", () => {
+    // AJAX REQUEST GOES HERE PLS
+  })
+});
+</script>

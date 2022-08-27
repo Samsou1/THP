@@ -1,0 +1,41 @@
+<% if false %>
+  <form action= <%= gossip_index_path %> method="POST">
+    <p>What title do you want to give your gossip?</p>
+    <input type="text" name="gossip_title"><br>
+    <br>
+    <p>Give us the dirt</p>
+    <input type="text" name="gossip_content" size=50><br>
+    <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+    <br>
+    <input type="submit" value="Confirm">
+  </form>
+<%end%>
+<div class="container text-center">
+  <h3>You want to create a new gossip? You're at the right place.</h3>
+  <br>
+  <%= form_with url: gossip_index_path, local: true do |form| %>
+    <%#La méthode form_with appelle implicitement la méthode post, local true est nécessaire pour rails 5.2 et 6.0%>
+    <p>What title do you want to give your gossip?</p>
+    <%= form.text_field :gossip_title %>
+    <br>
+    <br>
+    <p>Give us the dirt</p>
+    <%= form.text_area :gossip_content, size: "70x5" %>
+    <br>
+    <%= form.submit "Publish" %>
+  <% end %>
+  <br>
+  <br>
+  <% if @gossip.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p>We were not able to create this new gossip for the following reason(s):</p>
+      <ul style="list-style-type:none">
+        <% @gossip.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <br>
+    <p>Please try again</p>
+  <% end %>
+</div>

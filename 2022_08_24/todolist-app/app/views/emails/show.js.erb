@@ -1,0 +1,5 @@
+selectedEmail = document.querySelectorAll(".col-6 ")[1].innerHTML ="<%= j render 'email', email: @email %>";
+selectedEmail = "<%= j render 'email', email: @email %>";
+
+objectEmail = document.getElementById(<%= @email.id%>);
+objectEmail.innerHTML ="<%= j render 'email_object', email: @email %>";

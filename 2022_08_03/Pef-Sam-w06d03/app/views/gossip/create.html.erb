@@ -1,0 +1,28 @@
+<div class="container text-center">
+  <h1 class="mb-3">Gossips</h1>
+  <% if @posted == true %>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>You created a new gossip successfully! Thank you for making this blog a little bit more untertaining and the world a little bit less toxic. Ahah.</p>
+    </div>
+  <%end%>
+  <div>Do you want to create a new gossip?</div>
+  <div><%= link_to "Click here", new_gossip_path %></div>
+  <br>
+  <br>
+  <div class="row row-cols-1 row-cols-md-3 text-center">
+    <% @gossips.each_with_index do |gossip| %>
+      <div class="col">
+        <div class="col card mb-4 rounded-3 shadow-sm">
+          <div class="card-header">
+            <a class="index" href="/gossip/<%=gossip.id %>">Gossip n° <%= gossip.id %></a>
+          </div>
+          <div class= "card-body">
+            <span class="card-tile ">Author:      </span><%= gossip.user.first_name %><br>
+            <span class="font-bold">Title:      </span><%= gossip.title %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

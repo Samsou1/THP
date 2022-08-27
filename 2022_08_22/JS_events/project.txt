@@ -1,0 +1,41 @@
+Faire un LeBonCoin entre amis
+Constat : on a plein d’affaires à vendre/prêter/louer mais on ne s’en occupe jamais parce que ça prend du temps. 
+On préfèrerait en faire profiter à des gens qu’on apprécie ou dont on est proche géographiquement.
+
+LeBonCoin entre amis propose 2 solutions :
+La location entre amis. En gros ça ressemble à Leboncoin, on peut proposer des objets dont on se sert assez peu (genre une piscine gonflable,
+un matelas, un compresseur, des cables pour démarrer les voitures. Le prix ne sera pas forcément affiché parce que suivant la personne à qui on finit 
+par louer tel ou tel objet, le prix ne sera pas le même. On ne le louera pas aussi cher à son meilleur ami (voire même on le fait gratuitement) 
+qu’à un pote qu’on a pas vu depuis 10 ans. 
+Introducing : les cercles. C’est une notion qui permet de définir la proximité avec ses contacts. On peut créer :
+    1. Un cercle des meilleurs amis, 2-3 pour qui les prix seront par défaut de 0. Ils auront des alertes à chaque fois que l’on poste quelque chose.
+     (cercle par défaut)
+    2. Un cercle d’amis, 5-10 pour qui les prix seront assez faibles et tous les objets ne seront pas disponibles à la location. (cercle par défaut)
+    3. Un cercle de connaissances, pour qui seuls quelques objets seront visibles à la location. (cercle par défaut)
+    4. Autres cercles…
+
+La 2eme fonctionnalité proposée par Leboncoin entre amis est la vente. Cela reprend beaucoup de concepts déjà établis par la location mais cette fois ci
+
+Il faut donc avoir un système qui gère les users, les relations entre users, 
+BDD :
+    • Users (prénom, nom, avatar, mdp, tel, email, ville)
+    • Relations entre users (équivalent des cercles)
+    • Objets (titre, description, disponibilité, photo)
+    • Prix (table jointe objet cercle)
+
+A prévoir : 
+    • Login
+    • Invitation d’amis
+    • Interface où on peut visualiser ses différents cercles. Création/modification de cercles et ajouts de nouveaux amis dans ces cercles.
+    • Mise en location/vente d’objet
+    • Interface où on peut visualiser ses différents objets à la vente et à la location
+    • Notifications lors de la mise en location/vente d’objets d’amis
+    • Stripe pour la location/vente
+
+On peut aussi prévoir de la location à des gens qui font partie d’un cercle créé par défaut qui regroupe tous les utilisateurs de la même ville. 
+On peut ne rien mettre en location aux gens de sa ville mais on peut mettre quelques petits trucs dont on se fout. Cela viendrait à créer une nouvelle
+ notion des users : une note. Comme uber, leboncoin, blablacar, on peut avoir une note sur 5 pour justifier de notre sérieux lors de la location. 
+
+Autre fonctionnalité : mise en relation avec un service d’assurance qui vous rembourse si votre objet est volé ou détérioré. Ce service vous demande 
+d’estimer la valeurs de vos biens et de la justifier (description, photo), et chaque mois vous devez payer une contribution pour l’ensemble des objets 
+qui sont en location.

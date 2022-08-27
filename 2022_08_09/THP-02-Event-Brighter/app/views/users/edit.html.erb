@@ -1,0 +1,26 @@
+<div class="container d-flex justify-content-center text-center">
+  <div class="card shadow-sm w-50 text-bg-light">
+    <div class="card-header">
+      <h4 class="index" href="/user/<%=current_user.id %>">User n° <%= current_user.id %></h4>
+    </div>
+    <div class= "card-body">
+      <%= form_with url: profile_path, method: :post, local: true do |form| %>
+        <p>Avatar</p>
+        <%= form.file_field :avatar, value:@user.avatar%>
+        <br><br>
+        <p>First name</p>
+        <%= form.text_field :first_name, value: @user.first_name %>
+        <br><br>
+        <p>Last name</p>
+        <%= form.text_field :last_name, value: @user.last_name %>
+        <br><br>
+        <p>Description</p>
+        <%= form.text_field :description, value: @user.description %>
+        <br><br>
+        <%= form.submit "Accept" %>
+      <% end %>
+      <br>
+      <%= link_to "Click here to change your password", edit_user_registration_path %>
+    </div>
+  </div>
+</div>

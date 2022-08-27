@@ -1,0 +1,15 @@
+<div class="container text-center">
+  <div class="card shadow-sm">
+    <div class="card-header">
+      <a class="index" href="/gossips/<%=@gossip.id %>">Gossip n° <%= @gossip.id %></a>
+    </div>
+    <div class= "card-body">
+      <a class="font-bold" href="/author/<%= @gossip.user.id %>">Author: <%= @gossip.user.first_name %></a><br>
+      <span class="font-bold">Title:      </span><%= @gossip.title %><br>
+      <br>
+      <span class="font-bold">Content:      </span><%= @gossip.content %><br>
+      <br>
+      <span class="font-bold">Posting date:      </span><%= @gossip.created_at %>
+    </div>
+  </div>
+</div>

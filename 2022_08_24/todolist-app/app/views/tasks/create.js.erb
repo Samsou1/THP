@@ -1,0 +1,2 @@
+<%# alert("le fichier JS est exécuté!"); %>
+document.querySelectorAll(".card > ul")[<%= @task.category.id - 1%>].insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>");

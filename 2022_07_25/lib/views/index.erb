@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <main>
+      <img src="/img/TMP.png" alt="TMP">
+      <h2>All gossips:</h2>
+      <section><% gossips.each_with_index do |gossip, idx| %>
+          <p>
+            <a classname=".index" href="/gossips/<%= idx + 1 %>"><%= idx + 1 %></a><br>
+          </p>
+          <p><span>Author:      </span><%= gossip.keys.first %><br>
+          </p>
+          <p><span>Content:      </span><%= gossip.values.first %></p>
+        <% end %>
+      </section>
+      <h2><a href="/gossips/new/">Create gossip</a></h2>
+    </main>
+  </body>
+</html>

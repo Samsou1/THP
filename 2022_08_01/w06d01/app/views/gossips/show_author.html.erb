@@ -1,0 +1,12 @@
+<div class="container text-center">
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <a class="index" href="/author/<%=@author.id %>">User n° <%= @author.id %></a>
+        </div>
+        <div class= "card-body">
+            <p>First name: <br><%= @author.first_name %></p><br>
+            <p>Last name: <br><%= @author.last_name %></p><br>
+            <p>User creation: <br><%= @author.created_at %></p><br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<% if @email.read == true%>
+  <li id = "<%= @email.id%>"> 
+  <%= form_tag(email_path(id:@email.id), method: "show", class: "form", id: "show-form", remote: true)  do %>
+    <%= link_to @email.object, email_path(id:@email.id), remote: true %>
+  <%end%>
+  <br>
+  </li>
+<% else %>
+  <li id = "<%= @email.id%>"> 
+  <strong>
+  <%= form_tag(email_path(id:@email.id), method: "show", class: "form", id: "show-form-2", remote: true)  do %>
+    <%= link_to @email.object, email_path(id:@email.id), remote: true %>
+  <%end%>
+  </strong>
+  <br>
+  </li>
+<% end%>

@@ -1,0 +1,5 @@
+pickedMail = document.querySelectorAll(".col-6")[1];
+pickedMail.innerHTML = "";
+mailToDelete = document.getElementById(<%= @email.id%>);
+mailToDelete.parentNode.removeChild(mailToDelete);
+

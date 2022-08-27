@@ -1,0 +1,65 @@
+<div class="container text-center">
+  <div class="card shadow-sm">
+    <div class="card-header">
+      <%= link_to "Gossip n°#{@gossip.id}", gossip_path(@gossip.id) %>
+    </div>
+    <div class= "card-body">
+      <a class="font-bold" href="/user/<%= @gossip.user.id %>">Author: <%= @gossip.user.first_name %></a><br>
+      <span class="font-bold">City:      </span><%= @gossip.user.city.name %><br>
+      <br>
+      <span class="font-bold">Title:      </span><%= @gossip.title %><br>
+      <br>
+      <span class="font-bold">Content:      </span><%= @gossip.content %><br>
+      <br>
+      <span class="font-bold">Posting date:      </span><%= @gossip.created_at %>
+      <br>
+      <span class="font-bold">Likes:      </span><%= @like_count %>
+       <% if @likes.where(gossip_id: @gossip.id, user_id: current_user.id).count == 1 %>
+              <%= form_with url: like_path(:id), method: :delete, local: true do |form|%>
+                <button class="btn btn-block btn-primary"><i class="fa fa-thumbs-up"></i> </button>
+                <%= hidden_field :gossip_id, @gossip.id%>
+              <% end %>
+            <% end %>
+            <% if @likes.where(gossip_id: @gossip.id, user_id: current_user.id).count == 0 %>
+              <%= form_with url: like_index_path, local: true do |form|%>
+                <button class="btn btn-block btn-secondary"><i class="fa fa-thumbs-up"></i> </button>
+                <%= hidden_field :gossip_id, @gossip.id%>
+              <% end %>
+            <% end %>
+
+    </div>
+    <% if current_user.id == @gossip.user.id %>
+      <hr>
+      <div class= "card-body">
+        <p>Do you want to edit this gossip?
+          <p>
+            <div><%= link_to "Click here", edit_gossip_path %></div>
+          </div>
+        <%end%>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="container text-center">
+        <div class="card shadow-sm">
+          <div class="card-header">
+            <p>Comment(s)</p>
+          </div>
+          <div class= "card-body">
+            <h5>Do you want to add a comment?</h5>
+            <div><%= link_to "Click here", new_gossip_comment_path(@gossip.id) %></div>
+            <br>
+            <hr>
+            <% @comments.each do |comment| %>
+              <span class="card-tile ">Author:      </span><%= comment.user.first_name %><br>
+              <span class="font-bold">Content:      </span><%= comment.content %>
+              <br>
+              <br>
+              <p>Do you want to edit this comment?
+                <p>
+                  <div><%= link_to "Click here", edit_gossip_comment_path(@gossip.id, comment.id) %></div>
+                  <hr>
+                <% end %>
+              </div>
+            </div>
+          </div>

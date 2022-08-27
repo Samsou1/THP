@@ -1,0 +1,35 @@
+ <div class="container text-center">
+  <h3>You want to create a new event? <br> Thank you for making this community a better place!</h3>
+  <br>
+  <%= form_with url: events_path, local: true do |form| %>
+    <p>What title do you want to give your event?</p>
+    <%= form.text_field :event_title %>
+    <br>
+    <br>
+    <p>Can you give us some more details?</p>
+    <%= form.text_area :event_description, size: "70x5" %>
+    <br>
+    <br>
+    <p>Location</p>
+    <%= form.text_field :event_location %>
+    <br>
+    <br>
+    <p>Starting date</p>
+    <%= form.datetime_local_field :event_start_date %>
+    <br>
+    <br>
+    <p>How much time is your event gonna last? (increments of 5 minutes only)</p>
+    <%= form.number_field :event_duration, step: 5 %>
+    <br>
+    <br>
+    <p>What price ($) will attendees have to pay?</p>
+    <%= form.number_field :event_price, in: 1..1000 %>
+    <br>
+    <br>
+    <p>Do you have a picture to show us?</p>
+    <%= form.file_field :event_picture %>
+    <br>
+    <br>
+    <%= form.submit "Create Event" %>
+  <% end %>
+</div>

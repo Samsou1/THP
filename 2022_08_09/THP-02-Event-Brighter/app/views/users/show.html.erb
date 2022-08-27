@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-8 m-auto">
+      <div class="bs-component">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title text-muted"><%= @user.first_name + @user.last_name%></h5>
+          </div>
+          <%if @user.avatar.attached?%>
+            <%= image_tag current_user.avatar, alt: 'avatar' %>
+          <%else%>
+            <img src="https://source.unsplash.com/1000x500?person" alt="placeholder">
+          <%end%>
+          <div class="card-body">
+            <p class="card-text text-muted"><%= @user.description %></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Email: <%= @user.email %></li>
+            <li class="list-group-item">Member since: <%= @user.created_at.strftime("#{@user.created_at.day.ordinalize} %B %Y") %></li>
+          </ul>
+          <div class="card-footer text-muted">Last updated
+            <%= @user.updated_at.strftime("#{@user.updated_at.day.ordinalize} %B %Y") %></div>
+          <div class="container d-flex justify-content-center"><%= link_to "Edit", profile_edit_path, class: "btn btn-primary" %></div>
+        </div>
+      </div>
+    </div>
+</div>

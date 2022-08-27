@@ -1,0 +1,50 @@
+body {
+  background-color: #161213;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+}
+
+main {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: #cf1100;
+  text-align: center;
+  margin: 0 auto;
+}
+
+span {
+  color: slategrey;
+  flex: 1;
+}
+
+h2 {
+  color: white;
+}
+
+img {
+  width: 50%;
+  margin: 2rem 0;
+}
+
+.index {
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  margin : 0.5rem 0;
+}

@@ -1,0 +1,30 @@
+<div class="container text-center">
+  <h1 class="mb-3">Gossips test</h1>
+  <% if @posted == true %>
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Well done!</h4>
+      <p>You updated a gossip successfully! Thank you for making this blog a little bit more untertaining and the world a little bit less toxic. Ahah.</p>
+    </div>
+  <%end%>
+  <div class="container text-center">
+    <div class="card shadow-sm">
+      <div class="card-header">
+        <a class="index" href="/gossip/<%=@gossip.id %>">Gossip n° <%= @gossip.id %></a>
+      </div>
+      <div class= "card-body">
+        <a class="font-bold" href="/user/<%= @gossip.user.id %>">Author: <%= @gossip.user.first_name %></a><br>
+        <span class="font-bold">City:      </span><%= @gossip.user.city.name %><br>
+        <br>
+        <span class="font-bold">Title:      </span><%= @gossip.title %><br>
+        <br>
+        <span class="font-bold">Content:      </span><%= @gossip.content %><br>
+        <br>
+        <span class="font-bold">Posting date:      </span><%= @gossip.created_at %>
+     </div>
+      <div class= "card-body">
+        <p>Do you want to edit this gossip?<p>
+      <div><%= link_to "Click here", edit_gossip_path %></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+
+body
+{
+    background-color: black;
+    color: white;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 1em;
+
+}
+
+.Settings
+{
+    font-size: 1em;
+    text-align: end;
+}
+
+.red
+{
+    color: red;
+}
+
+.brightred
+{
+    color:brown;
+}
+
+.tiny
+{
+    font-size:20%;
+}
+
+a
+{
+    color:red;
+}
+
+div
+{
+display:block
+}
+
+
+div.fancypositioning div.pictureleft
+{
+    float: left;
+    width: 40%;
+    margin-right: 1em;
+}
+
+div.fancypositioning div.textright
+{
+    float: left;
+    width: 55%
+}

@@ -1,0 +1,37 @@
+<div class="container text-center">
+  <div class="card shadow-sm">
+    <div class="card-header">
+      <a class="index" href="/user/<%=@user.id %>">User n° <%= @user.id %></a>
+    </div>
+    <div class= "card-body">
+      <p>First name: <br>
+        <%= @user.first_name %>
+      </p>
+      <%# <br> %>
+      <p>Last name: <br>
+        <%= @user.last_name %>
+      </p>
+      <%# <br> %>
+      <p>User creation: <br>
+        <%= @user.created_at %>
+      </p>
+      <%# <br> %>
+      <p>City: <br>
+        <%= link_to @user.city.name, city_path(@user.city.id) %>
+      </p>
+      <%# <br> %>
+      <p>Description: <br>
+        <%= @user.description %>
+      </p>
+      <%# <br> %>
+      <p>Email: <br>
+        <%= @user.email %>
+      </p>
+      <%# <br> %>
+      <p>Age: <br>
+        <%= @user.age %>
+      </p>
+      <%# <br> %>
+    </div>
+  </div>
+</div>

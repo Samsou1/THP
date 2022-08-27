@@ -1,0 +1,45 @@
+<div class="container text-center">
+  <h3>You're new to this gossip world? You're at the right place.</h3>
+  <br>
+  <%= form_with url: user_path, method: :patch, local: true do |form| %>
+    <%#La méthode form_with appelle implicitement la méthode post, local true est nécessaire pour rails 5.2 et 6.0%>
+    <p>Email</p>
+    <%= form.text_field :email, value: @user.email %>
+    <br>
+    <p>First name</p>
+    <%= form.text_field :first_name, value: @user.first_name %>
+    <br>
+    <p>Last name</p>
+    <%= form.text_field :last_name, value: @user.last_name %>
+    <br>
+    <p>City</p>
+    <%= form.text_field :city, value: @user.city.name %>
+    <br>
+    <p>Age</p>
+    <%= form.text_field :age, value: @user.age %>
+    <br>
+    <p>Description</p>
+    <%= form.text_field :description, value: @user.description %>
+    <br>
+    <br>
+    <p>Password</p>
+    <%= form.password_field :password %>
+    <br>
+    <p>Repeat password</p>
+    <%= form.password_field :password_confirmation %>
+    <br>
+    <%= form.submit "Publish" %>
+  <% end %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p>We were not able to edit this comment for the following reason(s):</p>
+      <ul style="list-style-type:none">
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <br>
+    <p>Please try again</p>
+  <% end %>
+</div>

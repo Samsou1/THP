@@ -1,0 +1,237 @@
+/* *
+{
+  background-color: black;
+} */
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p, blockquote, ul, ol, li
+{
+  font-family: cursive;
+}
+
+.cat
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+.colour
+{
+  height: 100px;
+  width:300px;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary
+{
+  background-color: rgb(11, 0, 51);
+  color: white;
+}
+
+.secondary
+{
+  background-color: rgb(131, 34, 50);
+  color: white;
+}
+
+.dark
+{
+  background-color: #495057;
+}
+
+.medium-light
+{
+background-color: #adb5bd;
+}
+
+.light
+{
+background-color: #dee2e6;
+}
+
+
+.alert{
+  
+  height: 50px;
+  width:200px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.warning
+{
+background-color: #f6bb42;
+}
+
+.danger
+{
+  background-color:#da4453;
+}
+
+.success{
+  background-color: #8cc152;
+}
+
+.info{
+  background-color: #3bafda;
+}
+
+
+
+.button
+{
+  
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover:not(.disabled)
+{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.disabled
+{
+  border: none;
+}
+
+.btn-sm
+{
+  height: 40px;
+  min-width: 150px;
+}
+
+.btn-lg
+{
+  height: 60px;
+  min-width: 200px;
+}
+
+.btn-max
+{
+  height:60px;
+  width:100%;
+}
+
+input[type=text]
+{
+  border-radius: 10px;
+  height: 40px;
+  width: 300px;
+  border-color: #adb5bd;
+}
+
+input:focus
+{
+  background-color: #dee2e6;
+}
+
+select
+{
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  border-color: #adb5bd;
+}
+
+textarea
+{
+  border-radius: 10px;
+  min-height: 100px;
+  min-width: 400px;
+  border-color: #adb5bd;
+}
+
+input[type=radio]
+{
+  background-color: rgb(11, 0, 51);
+  color: red;
+  border: red;
+}
+
+input[type=radio]
+{
+  border: 1px dashed rgb(11, 0, 51);
+}
+
+input[type="radio"]:checked
+{
+}
+
+.icon
+{
+  color: rgb(11, 0, 51);
+}
+
+.card
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width:20rem;
+  border: solid 1px rgb(11, 0, 51);
+  border-radius: 10px;
+}
+
+.card-img-top
+{
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.card-body
+{
+
+}
+
+.card-title
+{
+
+}
+
+.card-body
+{
+
+}
+
+.text-overlay
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.w3schools.com/images/w3schools_green.jpg");
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  color: white;
+  width:100%;
+  height: 200px;
+
+}
+
+/* Other colours
+purple : rgb(55, 0, 49)
+copper : rgb(206, 137, 100)
+lime : rgb(234, 242, 124)
+
+
+*/

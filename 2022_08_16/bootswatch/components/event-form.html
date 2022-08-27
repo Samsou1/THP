@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/reference/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/reference/custom.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <title>Index</title>
+</head>
+
+<body>
+  <div class="container col-lg-6">
+    <legend>Create an event</legend>
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="event1">Name your event</label>
+      <input type="text" class="form-control" placeholder="Hellfest 2023" id="event1">
+    </div>
+    <div class="form-group">
+      <label for="event2" class="form-label mt-4">Describe your event</label>
+      <textarea class="form-control"
+        placeholder="A music festival that will rock your face. No need for metal detectors." id="event2"
+        rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="event3">Event location</label>
+      <input type="text" class="form-control" placeholder="Hell" id="event3">
+    </div>
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="event4">Event date</label>
+      <input type="datetime-local" class="form-control" id="event4">
+    </div>
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="event5">Event duration in minutes</label>
+      <input type="number" step="5" class="form-control" placeholder="60" id="event5">
+    </div>
+    <div class="form-group">
+      <label class="col-form-label mt-4" for="event6">Price per participant</label>
+      <div class="input-group">
+        <span class="input-group-text">$</span>
+        <input type="number" min="0" max="1000" class="form-control" aria-label="Amount (to the nearest dollar)"
+          id="event6">
+        <span class="input-group-text">.00</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="event7" class="form-label mt-4">Select an image for your event</label>
+      <input class="form-control" type="file" id="event7">
+    </div>
+    <div class="container d-flex justify-content-center mt-5">
+      <button type="button" class="btn btn-lg btn-primary">Submit for review</button>
+    </div>
+  </div>
+</body>
+
+</html>

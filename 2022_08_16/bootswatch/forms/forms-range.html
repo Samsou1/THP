@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/reference/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/reference/custom.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <title>Index</title>
+</head>
+
+<body>
+  <form data-bitwarden-watching="1">
+    <fieldset class="form-group">
+      <legend class="mt-4">Ranges</legend>
+      <label for="customRange1" class="form-label">Example range</label>
+      <input type="range" class="form-range" id="customRange1" value="50">
+      <label for="disabledRange" class="form-label">Disabled range</label>
+      <input type="range" class="form-range" id="disabledRange" disabled="disabled" value="50">
+      <label for="customRange3" class="form-label">Example range</label>
+      <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3" value="2.5">
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</body>
+
+</html>
