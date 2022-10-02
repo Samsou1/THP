@@ -1,0 +1,22 @@
+const users = [
+  { id: 1, email: "dwainwatsica@blockluettgen.org", firstName: "Della", lastName: "Noél", sex: "F", revenue: 3700, country: "Colombia" },
+  { id: 2, email: "berthaabbott@quigley.io", firstName: "Rodney", lastName: "Dumas", sex: "M", revenue: 9100, country: "Germany" },
+  { id: 3, email: "willodeanchristiansen@kreigerkoch.biz", firstName: "Danny", lastName: "Morin", sex: "M", revenue: 0, country: "United States" },
+  { id: 4, email: "nikki@monahan.com", firstName: "Birgit", lastName: "Dubois", sex: "F", revenue: 7700, country: "Great Britain" },
+  { id: 5, email: "albinafritsch@bartell.net", firstName: "Audra", lastName: "Hénry", sex: "F", revenue: 0, country: "Germany" },
+  { id: 6, email: "laurencethompson@schaefer.org", firstName: "Doreatha", lastName: "Nguyén", sex: "F", revenue: 0, country: "France" },
+  { id: 7, email: "floratreutel@hageneshahn.info", firstName: "Vergie", lastName: "Marchal", sex: "F", revenue: 3900, country: "France" },
+  { id: 8, email: "kendallkunze@bechtelar.org", firstName: "Eloy", lastName: "Rivieré", sex: "M", revenue: 0, country: "France" },
+  { id: 9, email: "matt@jakubowskiwitting.info", firstName: "Therese", lastName: "Dupont", sex: "F", revenue: 1500, country: "France" },
+  { id: 10, email: "alleneshanahan@lindgren.info", firstName: "Dora", lastName: "Rousséau", sex: "F", revenue: 0, country: "Great Britain" },
+  { id: 11, email: "vito@hayesbartoletti.org", firstName: "Robt", lastName: "Meyér", sex: "M", revenue: 800, country: "France" },
+  { id: 12, email: "chadwick@anderson.io", firstName: "Vincenzo", lastName: "Jéan", sex: "M", revenue: 0, country: "Germany" },
+  { id: 13, email: "asley@stroman.info", firstName: "Myong", lastName: "Lopéz", sex: "F", revenue: 0, country: "Germany" },
+  { id: 14, email: "hank@huelkilback.com", firstName: "Horacio", lastName: "Rousséau", sex: "M", revenue: 0, country: "France" },
+  { id: 15, email: "buckwaelchi@gusikowski.net", firstName: "Rhonda", lastName: "Noél", sex: "F", revenue: 6600, country: "Czech Republic" },
+  { id: 16, email: "clay@greenfelder.co", firstName: "Julienne", lastName: "Carpéntier", sex: "F", revenue: 0, country: "Great Britain" },
+  { id: 17, email: "clarettarunolfsdottir@vonruedenwolff.org", firstName: "Maudie", lastName: "Brunét", sex: "F", revenue: 0, country: "Great Britain" },
+  { id: 18, email: "dorris@nolan.name", firstName: "Dirk", lastName: "Rodriguéz", sex: "M", revenue: 0, country: "Germany" },
+  { id: 19, email: "ronspencer@waltercarter.biz", firstName: "Ernie", lastName: "Collét", sex: "M", revenue: 0, country: "Great Britain" },
+  { id: 20, email: "armandina@kshlerin.biz", firstName: "Arleen", lastName: "Roux", sex: "F", revenue: 0, country: "Taiwan" }
+]

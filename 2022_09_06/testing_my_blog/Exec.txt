@@ -1,0 +1,30 @@
+# Executive Summary
+
+## Presentation 
+After this very warm summer of 2022, all time high temperatures, and the collapse of the ecosystems, there is no dennying we need to change the way we live. Even the simplest habits need to change in a more sustainable and environment friendly way.
+A lot of us want to act. And it starts right here. Right where we live. We need to welcome the environment at our house. That's what prarify is all about.
+Prairify offers people a way to easily redesign their garden by providing helpful ressources of what they could plant where they live. The goals are first to make their garden look prettier than a simple patch of lawn but more importantly to respect the environment and the wildlife around. 
+After identifying what plants people want to have in their garden and starting their project, they can then share their project on Prairify, year after year encouraging other people to do the same. 
+Prairify's main goal is to help the planet by making our very home a better looking place. 
+
+## Business Model
+We offer different ressources so that users can start their own project. They can pick plants and flowers depending on how they look, how they grow in the area and what wildlife it will bring back.
+People can then create their own project on prairify, update it and share it to other users.... These projects will then inspire others to do so and share them. 
+When we offer these resources, we also provide different solutions to make this project happen. For instance we help people finding the seeds that they need, buying the tools that will make their project doable and contacting landscapers to makeover their garden.
+Each and every time we redirect to one of these resources, the partner we redirect to pays a little bit of money to prairify. That's our first way of making money.
+But we're also planning on selling seeds that users will need in order to start their prairify project. This second way of making money will be developed in 2023.
+
+## Team
+We are a team of 6 passionate and dedicated developpers who like to offer solutions to the young generation of today and of tomorrow. 
+Our team is made of 6 full stack developpers who had different lives within their lives. One was a pilot, one was an engineer, another was a cook, one was working the hotel industry, one was working in a bakery and the last one was working as a salesman...
+Though we all had a very different background, all all of us shared the same vision of the world. We are all concerned about the environment and what we are going to leave behind. That's how this team gathered around a simple but unique and helpful project: prairify.
+
+## Target
+Our target would be anyone who's looking for a makeover of their garden. Prairify will mostly be used by people who have the time and energy to do this garden makeover all by themselves but also by people who feel concerned about their future or the future of their children. Most people who feel concerned about the world and who can do something meaningful about it live, unfortunately, in rich countries.  
+From this analysis, we can identify our target: young couples and parents from 25 to 45yo who live in the countryside or in peri-urban areas in rich countries. 
+
+## Performance so far
+So far our app generated over 30k euros in add revenue over 300 000 clicks on our partenairs' links.
+
+## Aim within three years / Three year forecast
+With the world changing rapidly and the growth of the number of active projects on our app. We expect the revenues to triple within 3 years, making our gross income about 100k in 2025.
