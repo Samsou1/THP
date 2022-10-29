@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel=”stylesheet” href=”main.css”>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div id="error">
+
+    </div>
+    
+    <form id="form" action="/" method="GET">
+      <div>
+        <label for="first_name">First Name</label>
+        <input id="first_name" name="first_name" type="text" required>
+      </div>
+      <div>
+        <label for="last_name">Last Name</label>
+        <input id="last_name" name="last_name" type="text" required>
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" required>
+      </div>
+      <div>
+        <label for="email_confirmation">Email confirmation</label>
+        <input id="email_confirmation" name="email_confirmation" type="text" required>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+      </div>
+      <div>
+        <label for="password_confirmation">Password confirmation</label>
+        <input id="password_confirmation" name="password_confirmation" type="password">
+      </div>
+      <div>
+        <label for="terms_and_conditions">I accept the terms and conditions</label>
+        <input id="terms_and_conditions" name="terms_and_conditions" type="checkbox">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "2022_10_07",
+  "version": "1.0.0",
+  "description": "Ceci est une base de code pour le projet du Morpion, dans le cadre de la semaine sur l'algorithmie de la formation THP-Next.",
+  "main": "morpion.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samsou1/tic-tac-toe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Samsou1/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/Samsou1/tic-tac-toe#readme"
+}

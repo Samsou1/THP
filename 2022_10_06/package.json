@@ -1,0 +1,21 @@
+{
+  "name": "2022_10_06",
+  "version": "1.0.0",
+  "description": "Trees and nodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samsou1/binary_trees.git"
+  },
+  "author": "Samsou1",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Samsou1/binary_trees/issues"
+  },
+  "homepage": "https://github.com/Samsou1/binary_trees#readme"
+}
