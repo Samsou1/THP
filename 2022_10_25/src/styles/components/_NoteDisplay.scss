@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+#note-display {
+  width: 100%;
+  min-height: 63vh;
+}
+
+#title {
+  margin-bottom: 10px;
+}
+
+#title p, h1, h2, h3, h4, h5, h6 {
+color: $title-color;
+font-family: "Playfair Display";
+font-weight: 700;
+font-size: 28px;
+}
+
+#note * {
+  color: $text-color;
+  font-family: "Roboto";
+  font-weight: 400;
+  word-wrap: break-word;
+}

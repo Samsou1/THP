@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+input[type=text] {
+  width: 100%;
+  height: 25px;
+  padding: 25px 10px;
+  margin-bottom: 10px;
+  color: $text-color;
+  font-family: $text-font;
+  font-size: $text-font-size;
+  background-color: $accent-background;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  color: $text-color;
+  font-family: $text-font;
+  font-size: $text-font-size;
+  background-color: $accent-background;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+::placeholder {
+  color: $text-color;
+}
+
+input[type=submit] {
+  width: 200px;
+  height: 40px;
+  border: none;
+  background-color: $button-color;
+  color: $text-color;
+  font-family: $text-font;
+  font-size: $text-font-size;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: hsl(351, 91%, 45%);;
+  }
+}
