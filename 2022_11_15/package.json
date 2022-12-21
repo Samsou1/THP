@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "jasmine": "^4.5.0"
+  },
+  "type":"module",
+  "scripts": {
+    "test": "jasmine spec/itemSpec.js;jasmine spec/shopSpec.js;jasmine spec/itemsSpec/legendaryItemSpec.js;jasmine spec/itemsSpec/decreasingQualityItemSpec.js;jasmine spec/itemsSpec/increasingQualityItemSpec.js;jasmine spec/itemsSpec/conjuredItemSpec.js",
+    "testItem": "jasmine spec/itemSpec.js",
+    "testShop": "jasmine spec/shopSpec.js",
+    "testLeg": "jasmine spec/itemsSpec/legendaryItemSpec.js",
+    "testDec": "jasmine spec/itemsSpec/decreasingQualityItemSpec.js",
+    "testInc": "jasmine spec/itemsSpec/increasingQualityItemSpec.js",
+    "testCon": "jasmine spec/itemsSpec/conjuredItemSpec.js"
+  }
+}
